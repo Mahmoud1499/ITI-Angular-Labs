@@ -1,0 +1,15 @@
+<div class="center">
+  <h1>Task Two [Image Slider]</h1>
+  <img [src]="imageSource" />
+  <div class="btns">
+    <input
+      style="margin-left: 140px"
+      type="button"
+      value="Next"
+      (click)="next()"
+    />
+    <input type="button" value="Prev" (click)="previous()" />
+    <input type="button" value="Start" (click)="start()" />
+    <input type="button" value="Stop" (click)="stop()" />
+  </div>
+</div>

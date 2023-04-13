@@ -1,0 +1,9 @@
+<div class="center">
+  <h1>Task One [Two Way Binding]</h1>
+  <input type="text" placeholder="Enter Your Input " [(ngModel)]="userInput" />
+  <h2>Your Input :</h2>
+
+  <h1>{{ userInput }}</h1>
+
+  <input type="button" value="Reset" (click)="resetInput()" />
+</div>
