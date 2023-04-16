@@ -1,0 +1,17 @@
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of students; index as i">
+      <!-- <tr *ngFor="index as i"> -->
+      <td>{{ i + 1 }}</td>
+      <td>{{ s.name }}</td>
+      <td>{{ s.age }}</td>
+    </tr>
+  </tbody>
+</table>

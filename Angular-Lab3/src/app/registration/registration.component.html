@@ -1,0 +1,32 @@
+<div class="form-container">
+  <div class="form">
+    <label for="name">Name:</label>
+    <input
+      type="text"
+      id="name"
+      [ngClass]="{ right: userName.length >= 3 && userName }"
+      name="name"
+      [(ngModel)]="userName"
+      required
+    />
+
+    <div *ngIf="userName.length < 3 && userName">
+      <p>Name Must be More than 3 character</p>
+    </div>
+    <label for="age">Age:</label>
+    <input
+      type="number"
+      id="age"
+      name="age"
+      [ngClass]="{ right: userAge <= 40 && userAge >= 20 }"
+      [(ngModel)]="userAge"
+      required
+    />
+
+    <div *ngIf="userAge > 40 || (userAge < 20 && userAge != 0)">
+      <p>Age Must Be Between 20 And 40</p>
+    </div>
+
+    <button (click)="add()">Submit</button>
+  </div>
+</div>
