@@ -1,0 +1,30 @@
+<div *ngIf="user; else falseBlock" class="container my-2 w-50">
+  <div class="card user-card">
+    <div class="card-header bg-primary text-white">
+      <h4>User Number {{ user.id }} Details</h4>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title my-2"><strong>Name:</strong>{{ user.name }}</h5>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="card-text"><strong>Age:</strong> {{ user.age }}</p>
+          <p class="card-text"><strong>Email:</strong> {{ user.email }}</p>
+
+          <p class="card-text"><strong>Phone:</strong> {{ user.phone }}</p>
+          <p class="card-text"><strong>Address:</strong> {{ user.address }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #falseBlock>
+  <div
+    style="height: 20vh"
+    class="d-flex justify-content-center align-items-center"
+  >
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+</ng-template>

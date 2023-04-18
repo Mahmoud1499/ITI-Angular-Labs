@@ -1,0 +1,42 @@
+<div class="container my-2">
+  <h1>All Users</h1>
+  <div class="text-right">
+    <a class="btn btn-success" routerLink="/addUser"> Add New User</a>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of users">
+        <td>{{ u.id }}</td>
+        <td>{{ u.name }}</td>
+        <td>{{ u.age }}</td>
+        <td>{{ u.email }}</td>
+        <td>{{ u.phone }}</td>
+        <td>
+          <a class="px-2" routerLink="{{ u.id }}">
+            <button class="btn btn-primary">Details</button>
+          </a>
+          <a class="px-2" routerLink="update/{{ u.id }}">
+            <button class="btn btn-success">Edit</button>
+          </a>
+          <a
+            class="btn btn-danger"
+            routerLink="/users"
+            (click)="deleteUser(u.id)"
+          >
+            Delete
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

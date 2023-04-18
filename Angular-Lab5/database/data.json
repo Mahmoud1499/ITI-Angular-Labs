@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "name": "Mahmoud",
+      "age": "34",
+      "email": "mahmoud@gmail.com",
+      "phone": "01091619325",
+      "address": "Alexandria, Egypt",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Ahmed",
+      "age": 20,
+      "email": "Ahmed@gmail.com",
+      "phone": "0151616",
+      "address": "Alexandria, Egypt"
+    },
+    {
+      "id": 3,
+      "name": "Lolo",
+      "age": 20,
+      "email": "lolo@gmail.com",
+      "phone": "01091619325",
+      "address": "Alexandria, Egypt"
+    },
+    {
+      "name": "Mahmoud Updated",
+      "age": "28",
+      "email": "mahmoud@gmail.com",
+      "phone": "01091619325",
+      "address": "Alexandria, Egypt",
+      "id": 4
+    },
+    {
+      "name": "Khaled",
+      "age": "32",
+      "email": "test@test.com",
+      "phone": "+201091619325",
+      "address": "123 Main St|42|North|Anytown|USA",
+      "id": 6
+    }
+  ]
+}

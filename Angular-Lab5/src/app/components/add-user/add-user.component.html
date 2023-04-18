@@ -1,0 +1,63 @@
+<div class="container w-50">
+  <h1>Add New User</h1>
+  <div class="" *ngIf="isAdded">
+    <p class="alert alert-success p-2">User Added successfully</p>
+  </div>
+  <form
+    (ngSubmit)="
+      addUser(name.value, age.value, email.value, phone.value, address.value)
+    "
+  >
+    <div class="form-group m-2">
+      <label for="name">Name</label>
+      <input
+        #name
+        type="text"
+        class="form-control"
+        id="name"
+        placeholder="Enter name"
+      />
+    </div>
+    <div class="form-group m-2">
+      <label for="age">Age</label>
+      <input
+        #age
+        type="number"
+        class="form-control"
+        id="age"
+        placeholder="Enter age"
+      />
+    </div>
+    <div class="form-group m-2">
+      <label for="email">Email address</label>
+      <input
+        #email
+        type="email"
+        class="form-control"
+        id="email"
+        placeholder="Enter email"
+      />
+    </div>
+    <div class="form-group m-2">
+      <label for="phone">Phone number</label>
+      <input
+        #phone
+        type="tel"
+        class="form-control"
+        id="phone"
+        placeholder="Enter phone number"
+      />
+    </div>
+    <div class="form-group m-2">
+      <label for="address">Address</label>
+      <textarea
+        #address
+        class="form-control"
+        id="address"
+        rows="3"
+        placeholder="Enter address"
+      ></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary m-2">Submit</button>
+  </form>
+</div>
